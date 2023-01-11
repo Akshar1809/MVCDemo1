@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MVCDemo1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace MVCDemo1.Controllers
 {
@@ -29,9 +31,7 @@ namespace MVCDemo1.Controllers
 
         public ActionResult About()
         {
-            /*ViewBag.Message = "Your application description page.";*/
-
-            
+            ViewBag.Message = "Your application description page.";
             return View();
         }
 
@@ -41,5 +41,6 @@ namespace MVCDemo1.Controllers
 
             return View();
         }
+
     }
 }
