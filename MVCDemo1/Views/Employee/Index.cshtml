@@ -22,3 +22,66 @@
         <td>@Model.City </td>
     </tr>
 </table>
+<h2>Razor syntax</h2>
+<br>
+
+<h3>Single Line or Inline Razor Code</h3>
+@*we use @ to write server side code of C# or BV code with html code*@
+Current Date and Time is : @DateTime.Now
+<br>
+Current Date and Time is : @DateTime.Now.ToShortDateString()
+<br>
+Current Date and Time is : @DateTime.Now.ToShortTimeString()
+
+
+
+<h3>Multiple Line Razor Code</h3>
+@*write multiple lines of server-side code enclosed in braces @{ ... }.*@
+@{
+    var name = "Akshar";
+    var age = 22;
+}
+My name is @name and age is @age
+
+<br>
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year @: is leap year
+}
+else
+{
+    @DateTime.Now.Year @: is Not leap year
+}
+
+
+<h3>For Loop in Razor</h3>
+@for (int i = 0; i < 5; i++)
+{
+    @i
+    <br />
+}
+<br />
+<br />
+<h2>HTML HELPERS</h2>
+
+Text Box : @Html.TextBox("First Name")  @*TextBox("Text to display")*@
+<br />
+Check Box : @Html.CheckBox("Cricket", true)  @*CheckBox("Name to display",ischecked)*@
+<br />
+Radio Button :
+<br />
+Male : @Html.RadioButton("Gender", "Male")      @*RadioButton("String","Value")*@
+Female : @Html.RadioButton("Gender", "Female")
+<br />
+
+<h3>DropDown Hardcore Entry using List</h3>
+Dropdown : @Html.DropDownList("Fruit",new List<SelectListItem>
+      {
+          new SelectListItem { Text="Apple",Value="1"},
+          new SelectListItem { Text="Banana",Value="2"},
+          new SelectListItem { Text="Strawberry",Value="3"},
+          new SelectListItem { Text="Pineapple",Value="4"}
+
+      }, "Select Fruit")
+
+<h4>Enum Function</h4>

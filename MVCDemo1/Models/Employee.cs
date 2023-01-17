@@ -12,4 +12,10 @@ namespace MVCDemo1.Models
         public string Gender { get; set; }
         public string City { get; set; }
     }
+    enum Colours
+    {
+        Blue,
+        Green,
+        Red
+    }
 }

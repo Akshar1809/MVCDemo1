@@ -7,6 +7,7 @@ using MVCDemo1.Models;
 
 namespace MVCDemo1.Controllers
 {
+   
     public class EmployeeController : Controller
     {
         // GET: Employee
@@ -17,7 +18,7 @@ namespace MVCDemo1.Controllers
                 EmployeeId= 1,
                 Name="Patel",
                 Gender="male",
-                City="Vadodara"
+                City="Vadodara"                
             };
             return View(emp);
         }
